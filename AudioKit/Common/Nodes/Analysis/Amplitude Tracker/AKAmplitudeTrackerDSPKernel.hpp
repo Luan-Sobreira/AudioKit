@@ -94,16 +94,16 @@ public:
             }
         }
 
-        bool wasAboveThreshold = isAboveThreshold;
+//        bool wasAboveThreshold = isAboveThreshold;
 
-        if ((leftAmplitude + rightAmplitude) / 2.0  > threshold * 1.05 && !wasAboveThreshold) {
-            isAboveThreshold = true;
+        if ((leftAmplitude + rightAmplitude) / 2.0  > threshold * 1.00 /*&& !wasAboveThreshold*/) {
+//            isAboveThreshold = true;
             thresholdCallback(true);
         }
-        if (wasAboveThreshold && (leftAmplitude + rightAmplitude) / 2.0 < threshold * 0.95) {
-            isAboveThreshold = false;
-            thresholdCallback(false);
-        }
+//        if (wasAboveThreshold && (leftAmplitude + rightAmplitude) / 2.0 < threshold * 0.95) {
+//            isAboveThreshold = false;
+//            thresholdCallback(false);
+//        }
 
     }
 
